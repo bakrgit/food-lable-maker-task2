@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+/* FDA Nutrition Label Styles */
+.nutrition-label {
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: none;
+}
+
+/* RTL Support */
+[dir="rtl"] .nutrition-label {
+  font-family: 'Noto Sans Arabic', sans-serif;
+}
+
+[dir="rtl"] .nutrition-label .text-right {
+  text-align: left;
+}
+
+[dir="rtl"] .nutrition-label .text-left {
+  text-align: right;
+}
+
+[dir="rtl"] .nutrition-label .text-end {
+  text-align: start;
+}
+
+/* Font overrides for specific elements */
+.nutrition-label h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+
+[dir="rtl"] .nutrition-label h1 {
+  font-family: 'Noto Sans Arabic', sans-serif;
+  font-weight: 900;
+  letter-spacing: normal;
+}
+
+/* Ensure proper spacing in both directions */
+[dir="rtl"] .nutrition-label .mr-4 {
+  margin-right: 1rem !important;
+  margin-left: 0 !important;
+}
+
+[dir="rtl"] .nutrition-label .mr-8 {
+  margin-right: 2rem !important;
+  margin-left: 0 !important;
+}
+
+/* Ensure proper text alignment for values */
+[dir="rtl"] .nutrition-label .flex {
+  text-align: right;
+}
+
+/* Ensure proper border spacing */
+.nutrition-label .border-b {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
